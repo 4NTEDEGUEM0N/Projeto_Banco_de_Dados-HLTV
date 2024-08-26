@@ -1,6 +1,7 @@
 # Projeto_Banco_de_Dados-HLTV
 
 ## Requirements
+* Python 3.12.3
 * pip install -r requirements.txt
 
 ## Run
