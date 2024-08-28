@@ -1,13 +1,15 @@
 from datetime import date
 from pydantic import BaseModel, ConfigDict
-from typing import Optional
+from typing import Optional, List
 
 
 class JogadorSchemaBase(BaseModel):
     name: str
+    apelido: str
     nacionalidade: str
     data_nascimento: date
-    time_id: int | None = None
+    genero: str
+    foto_id : Optional[int] = None
 
 class JogadorCreate(JogadorSchemaBase):
     pass
@@ -17,8 +19,16 @@ class JogadorUpdate(JogadorSchemaBase):
 
 class JogadorResponse(JogadorSchemaBase):
     id: int
-    time: Optional["TimeSchemaBase"] = None
+    foto: Optional["ArquivoResponse"] = None
+    escalacao_jogador: Optional[List["JogadorEscalacaoResponse"]] = None
 
     model_config = ConfigDict(from_attributes=True)
 
-from schemas.time_schema import TimeSchemaBase
+class JogadorResponseMinimal(BaseModel):
+    id: int
+    apelido: str
+
+    model_config = ConfigDict(from_attributes=True)
+
+from schemas.jogador_x_escalacao_schema import JogadorEscalacaoResponse
+from schemas.arquivos_schema import ArquivoResponse

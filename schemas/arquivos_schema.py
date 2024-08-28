@@ -1,17 +1,17 @@
-from datetime import date
 from pydantic import BaseModel, ConfigDict
-from typing import Optional
 
 
-class ArquivosSchemaBase(BaseModel):
+class ArquivoSchemaBase(BaseModel):
     nome: str
 
-class ArquivoCreate(ArquivosSchemaBase):
+class ArquivoCreate(ArquivoSchemaBase):
     pass
 
-class ArquivoUpdate(ArquivosSchemaBase):
+class ArquivoUpdate(ArquivoSchemaBase):
     pass
 
-class ArquivoResponse(ArquivosSchemaBase):
+class ArquivoResponse(ArquivoSchemaBase):
     id: int
-    nome_arquivo: str
+    nome_foto: str
+
+    model_config = ConfigDict(from_attributes=True)

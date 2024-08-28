@@ -8,4 +8,4 @@ class TimeModel(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(100), nullable=False)
 
-    jogadores = relationship("JogadorModel", back_populates="time")
+    escalacao = relationship("EscalacaoModel", back_populates="time")

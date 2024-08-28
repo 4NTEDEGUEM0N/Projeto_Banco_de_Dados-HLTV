@@ -26,7 +26,14 @@ from models.jogador_model import JogadorModel
 from models.time_model import TimeModel
 
 # noinspection PyUnresolvedReferences
-from models.arquivos_model import ArquivoModel
+from models.arquivos_model import FotoModel
+
+# noinspection PyUnresolvedReferences
+from models.escalacao_model import EscalacaoModel
+
+# noinspection PyUnresolvedReferences
+from models.jogador_x_escalacao_model import JogadorEscalacaoModel
+
 
 from database.database import Base
 target_metadata = Base.metadata

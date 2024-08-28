@@ -12,5 +12,7 @@ class JogadorModel(Base):
     data_nascimento = Column(Date, nullable=False)
     genero = Column(String(50), nullable=False)
 
-    time_id = Column(Integer, ForeignKey("time.id"), nullable=True)
-    time = relationship("TimeModel", back_populates="jogadores")
+    foto_id = Column(Integer, ForeignKey("foto.id"), nullable=True)
+    foto = relationship("FotoModel", back_populates="jogador")
+
+    escalacao_jogador = relationship('JogadorEscalacaoModel', back_populates='jogador')

@@ -13,9 +13,14 @@ class TimeUpdate(TimeSchemaBase):
 
 class TimeResponse(TimeSchemaBase):
     id: int
-    jogadores: Optional[List["JogadorResponse"]] = None
+    escalacao: Optional[List["EscalacaoResponse"]] = None
+
+    model_config = ConfigDict(from_attributes=True)
+
+class TimeResponseMinimal(TimeSchemaBase):
+    id: int
 
     model_config = ConfigDict(from_attributes=True)
 
 
-from schemas.jogador_schema import JogadorResponse
+from schemas.escalacao_schema import EscalacaoResponse
