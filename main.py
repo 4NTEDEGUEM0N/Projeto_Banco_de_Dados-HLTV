@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from routers import jogador_router, time_router
+from routers import jogador_router, time_router, arquivos_router
 
 app = FastAPI()
 
@@ -9,6 +9,7 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
+app.include_router(arquivos_router.router)
 app.include_router(jogador_router.router)
 app.include_router(time_router.router)
 

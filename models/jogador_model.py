@@ -7,8 +7,10 @@ class JogadorModel(Base):
     __tablename__ = "jogador"
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(100), nullable=False)
+    apelido = Column(String(100), nullable=False)
     nacionalidade = Column(String(255), nullable=False)
     data_nascimento = Column(Date, nullable=False)
+    genero = Column(String(50), nullable=False)
 
     time_id = Column(Integer, ForeignKey("time.id"), nullable=True)
     time = relationship("TimeModel", back_populates="jogadores")
