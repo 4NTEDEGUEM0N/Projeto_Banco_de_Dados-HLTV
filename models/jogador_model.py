@@ -16,3 +16,4 @@ class JogadorModel(Base):
     foto = relationship("FotoModel", back_populates="jogador")
 
     escalacao_jogador = relationship('JogadorEscalacaoModel', back_populates='jogador')
+    jogador_trofeu = relationship('JogadorTrofeuModel', back_populates='jogador')

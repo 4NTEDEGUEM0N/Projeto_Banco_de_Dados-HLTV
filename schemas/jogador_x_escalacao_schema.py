@@ -23,4 +23,4 @@ class JogadorEscalacaoResponse(JogadorEscalacaoSchemaBase):
 
 from schemas.escalacao_schema import EscalacaoResponseTime
 from schemas.jogador_schema import JogadorResponseMinimal
-from schemas.time_schema import TimeResponseMinimal
+

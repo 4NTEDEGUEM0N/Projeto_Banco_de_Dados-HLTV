@@ -10,3 +10,4 @@ class FotoModel(Base):
     dados = Column(LargeBinary, nullable=False)
 
     jogador = relationship("JogadorModel", back_populates="foto")
+    trofeu = relationship("TrofeuModel", back_populates="foto")

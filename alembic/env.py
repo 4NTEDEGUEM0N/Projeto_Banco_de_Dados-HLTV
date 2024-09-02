@@ -34,6 +34,15 @@ from models.escalacao_model import EscalacaoModel
 # noinspection PyUnresolvedReferences
 from models.jogador_x_escalacao_model import JogadorEscalacaoModel
 
+# noinspection PyUnresolvedReferences
+from models.evento_model import EventoModel
+
+# noinspection PyUnresolvedReferences
+from models.trofeu_model import TrofeuModel
+
+# noinspection PyUnresolvedReferences
+from models.jogador_x_trofeu_model import JogadorTrofeuModel
+
 
 from database.database import Base
 target_metadata = Base.metadata

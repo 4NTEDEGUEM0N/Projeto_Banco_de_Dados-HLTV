@@ -21,6 +21,7 @@ class JogadorResponse(JogadorSchemaBase):
     id: int
     foto: Optional["ArquivoResponse"] = None
     escalacao_jogador: Optional[List["JogadorEscalacaoResponse"]] = None
+    jogador_trofeu: Optional[List["JogadorTrofeuResponseMinimal"]] = None
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -31,4 +32,5 @@ class JogadorResponseMinimal(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 from schemas.jogador_x_escalacao_schema import JogadorEscalacaoResponse
+from schemas.jogador_x_trofeu_schema import JogadorTrofeuResponseMinimal
 from schemas.arquivos_schema import ArquivoResponse
