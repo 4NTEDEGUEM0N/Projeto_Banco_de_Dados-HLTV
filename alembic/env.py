@@ -64,6 +64,9 @@ from models.ranking_model import RankingModel
 # noinspection PyUnresolvedReferences
 from models.time_x_ranking_model import TimeRankingModel
 
+# noinspection PyUnresolvedReferences
+from models.noticia_model import NoticiaModel
+
 
 from database.database import Base
 target_metadata = Base.metadata
