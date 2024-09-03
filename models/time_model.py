@@ -9,3 +9,4 @@ class TimeModel(Base):
     name = Column(String(100), nullable=False)
 
     escalacao = relationship("EscalacaoModel", back_populates="time")
+    time_evento = relationship("TimeEventoModel", back_populates="time")

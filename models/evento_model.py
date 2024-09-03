@@ -14,3 +14,4 @@ class EventoModel(Base):
     premiacao = Column(Numeric(scale=2), nullable=False)
 
     trofeu = relationship("TrofeuModel", back_populates="evento")
+    time_evento = relationship("TimeEventoModel", back_populates="evento")

@@ -22,6 +22,7 @@ class EventoUpdate(EventoSchemaBase):
 class EventoResponse(EventoSchemaBase):
     id: int
     trofeu: Optional[List["TrofeuResponseJogador"]] = None
+    time_evento: Optional[List["TimeEventoResponseTime"]] = None
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -33,3 +34,4 @@ class EventoResponseMinimal(BaseModel):
 
 
 from schemas.trofeu_schema import TrofeuResponseJogador
+from schemas.time_x_evento_schema import TimeEventoResponseTime

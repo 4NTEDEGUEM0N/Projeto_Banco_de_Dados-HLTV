@@ -14,6 +14,7 @@ class TimeUpdate(TimeSchemaBase):
 class TimeResponse(TimeSchemaBase):
     id: int
     escalacao: Optional[List["EscalacaoResponse"]] = None
+    time_evento: Optional[List["TimeEventoResponseEvento"]]
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -24,3 +25,4 @@ class TimeResponseMinimal(TimeSchemaBase):
 
 
 from schemas.escalacao_schema import EscalacaoResponse
+from schemas.time_x_evento_schema import TimeEventoResponseEvento

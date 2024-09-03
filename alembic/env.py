@@ -43,6 +43,9 @@ from models.trofeu_model import TrofeuModel
 # noinspection PyUnresolvedReferences
 from models.jogador_x_trofeu_model import JogadorTrofeuModel
 
+# noinspection PyUnresolvedReferences
+from models.time_x_evento_model import TimeEventoModel
+
 
 from database.database import Base
 target_metadata = Base.metadata
