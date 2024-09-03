@@ -58,6 +58,12 @@ from models.mapa_model import MapaModel
 # noinspection PyUnresolvedReferences
 from models.mapa_x_partida_model import MapaPartidaModel
 
+# noinspection PyUnresolvedReferences
+from models.ranking_model import RankingModel
+
+# noinspection PyUnresolvedReferences
+from models.time_x_ranking_model import TimeRankingModel
+
 
 from database.database import Base
 target_metadata = Base.metadata

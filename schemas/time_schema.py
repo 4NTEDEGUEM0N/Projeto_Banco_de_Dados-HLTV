@@ -16,6 +16,7 @@ class TimeResponse(TimeSchemaBase):
     escalacao: Optional[List["EscalacaoResponse"]] = None
     time_evento: Optional[List["TimeEventoResponseEvento"]]
     time_partida: Optional[List["TimePartidaResponsePartidas"]]
+    time_ranking: Optional[List["TimeRankingResponse"]]
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -28,3 +29,4 @@ class TimeResponseMinimal(TimeSchemaBase):
 from schemas.escalacao_schema import EscalacaoResponse
 from schemas.time_x_evento_schema import TimeEventoResponseEvento
 from schemas.time_x_partida_schema import TimePartidaResponsePartidas
+from schemas.time_x_ranking_schema import TimeRankingResponse

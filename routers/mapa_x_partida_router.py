@@ -17,10 +17,6 @@ def create_mapa_partida(mapa_partida: MapaPartidaCreate, db: Session = Depends(g
 @router.get("/{partida_id}/{mapa_id}", response_model=MapaPartidaResponse, status_code=200)
 def get_mapa_partida(partida_id: int, mapa_id: int, db: Session = Depends(get_db)):
     db_mapa_partida = crud.mapa_x_partida_crud.read_mapa_partida(db=db, mapa_id=mapa_id, partida_id=partida_id)
-    print(vars(db_mapa_partida))
-    partidas = MapaPartidaResponse.model_validate(db_mapa_partida)
-    for partida in partidas:
-        print(partida)
     if db_mapa_partida is None:
         raise HTTPException(status_code=404, detail="Mapa Partida not found")
     return db_mapa_partida

@@ -11,3 +11,4 @@ class TimeModel(Base):
     escalacao = relationship("EscalacaoModel", back_populates="time")
     time_evento = relationship("TimeEventoModel", back_populates="time")
     time_partida = relationship("TimePartidaModel", back_populates="time")
+    time_ranking = relationship("TimeRankingModel", back_populates="time")
