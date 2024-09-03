@@ -52,6 +52,12 @@ from models.partida_model import PartidaModel
 # noinspection PyUnresolvedReferences
 from models.time_x_partida_model import TimePartidaModel
 
+# noinspection PyUnresolvedReferences
+from models.mapa_model import MapaModel
+
+# noinspection PyUnresolvedReferences
+from models.mapa_x_partida_model import MapaPartidaModel
+
 
 from database.database import Base
 target_metadata = Base.metadata

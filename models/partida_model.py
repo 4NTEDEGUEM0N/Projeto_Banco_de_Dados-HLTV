@@ -11,4 +11,4 @@ class PartidaModel(Base):
 
     evento = relationship("EventoModel", back_populates="partida")
     time_partida = relationship("TimePartidaModel", back_populates="partida")
-    #mapa_partida = relationship("MapaPartidaModel", back_populates="partida")
+    mapa_partida = relationship("MapaPartidaModel", back_populates="partida")

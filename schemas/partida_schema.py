@@ -16,14 +16,16 @@ class PartidaUpdate(PartidaSchemaBase):
 class PartidaResponse(PartidaSchemaBase):
     id: int
     evento: Optional["EventoResponseMinimal"]
-    time_partida: Optional[List["TimePartidaResponseTimes"]]
+    time_partida: Optional[List["TimePartidaResponseTimes"]] = None
+    mapa_partida: Optional[List["MapaPartidaResponseMapa"]] = None
 
     model_config = ConfigDict(from_attributes=True)
 
 class PartidaResponseTimes(BaseModel):
     id: int
     data: date
-    time_partida: Optional[List["TimePartidaResponseTimes"]]
+    time_partida: Optional[List["TimePartidaResponseTimes"]] = None
+    mapa_partida: Optional[List["MapaPartidaResponseMapa"]] = None
     model_config = ConfigDict(from_attributes=True)
 
 class PartidaResponseMinimal(BaseModel):
@@ -34,3 +36,4 @@ class PartidaResponseMinimal(BaseModel):
 
 from schemas.evento_schema import EventoResponseMinimal
 from schemas.time_x_partida_schema import TimePartidaResponseTimes
+from schemas.mapa_x_partida_schema import MapaPartidaResponseMapa
