@@ -5,6 +5,7 @@ from pydantic import BaseModel, ConfigDict
 from typing import List, Optional
 
 
+
 class EventoSchemaBase(BaseModel):
     nome: str
     data_inicio: date
@@ -23,6 +24,7 @@ class EventoResponse(EventoSchemaBase):
     id: int
     trofeu: Optional[List["TrofeuResponseJogador"]] = None
     time_evento: Optional[List["TimeEventoResponseTime"]] = None
+    partida: Optional[List["PartidaResponseTimes"]] = None
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -35,3 +37,5 @@ class EventoResponseMinimal(BaseModel):
 
 from schemas.trofeu_schema import TrofeuResponseJogador
 from schemas.time_x_evento_schema import TimeEventoResponseTime
+from schemas.partida_schema import PartidaResponseTimes
+from schemas.time_x_partida_schema import TimePartidaResponseTimes

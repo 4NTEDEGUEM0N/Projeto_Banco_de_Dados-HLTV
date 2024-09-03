@@ -15,3 +15,4 @@ class EventoModel(Base):
 
     trofeu = relationship("TrofeuModel", back_populates="evento")
     time_evento = relationship("TimeEventoModel", back_populates="evento")
+    partida = relationship("PartidaModel", back_populates="evento")
