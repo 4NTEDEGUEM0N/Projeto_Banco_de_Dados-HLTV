@@ -13,7 +13,7 @@ def create_time_evento(db: Session, time_evento: TimeEventoCreate):
 
 
 def read_time_evento(db: Session, time_id: int, evento_id: int):
-    return db.get(TimeEventoModel, (time_id, evento_id))
+    return db.get(TimeEventoModel, (evento_id, time_id))
 
 
 def read_times_eventos(db: Session, skip: int = 0, limit: int = 10):
@@ -29,7 +29,7 @@ def update_time_evento(db: Session, db_time_evento: TimeEventoModel, time_evento
 
 
 def delete_time_evento(db: Session, time_id: int, evento_id: int):
-    db_time_evento = db.get(TimeEventoModel, (time_id, evento_id))
+    db_time_evento = db.get(TimeEventoModel, (evento_id, time_id))
     db.delete(db_time_evento)
     db.commit()
 

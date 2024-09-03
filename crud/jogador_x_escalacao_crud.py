@@ -13,7 +13,7 @@ def create_jogador_escalacao(db: Session, jogador_escalacao: JogadorEscalacaoCre
 
 
 def read_jogador_escalacao(db: Session, jogador_id: int, escalacao_id: int):
-    return db.get(JogadorEscalacaoModel, (jogador_id, escalacao_id))
+    return db.get(JogadorEscalacaoModel, (escalacao_id, jogador_id))
 
 
 def read_jogadores_escalacoes(db: Session, skip: int = 0, limit: int = 10):
@@ -29,7 +29,7 @@ def update_jogador_escalacao(db: Session, db_jogador_escalacao: JogadorEscalacao
 
 
 def delete_jogador_escalacao(db: Session, jogador_id: int, escalacao_id: int):
-    db_jogador_escalacao = db.get(JogadorEscalacaoModel, (jogador_id, escalacao_id))
+    db_jogador_escalacao = db.get(JogadorEscalacaoModel, (escalacao_id, jogador_id))
     db.delete(db_jogador_escalacao)
     db.commit()
 

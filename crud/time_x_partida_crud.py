@@ -13,7 +13,7 @@ def create_time_partida(db: Session, time_partida: TimePartidaCreate):
 
 
 def read_time_partida(db: Session, time_id: int, partida_id: int):
-    return db.get(TimePartidaModel, (time_id, partida_id))
+    return db.get(TimePartidaModel, (partida_id, time_id))
 
 
 def read_times_partidas(db: Session, skip: int = 0, limit: int = 10):
@@ -29,7 +29,7 @@ def update_time_partida(db: Session, db_time_partida: TimePartidaModel, time_par
 
 
 def delete_time_partida(db: Session, time_id: int, partida_id: int):
-    db_time_partida = db.get(TimePartidaModel, (time_id, partida_id))
+    db_time_partida = db.get(TimePartidaModel, (partida_id, time_id))
     db.delete(db_time_partida)
     db.commit()
 

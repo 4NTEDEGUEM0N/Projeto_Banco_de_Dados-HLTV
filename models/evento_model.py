@@ -6,7 +6,7 @@ from sqlalchemy.orm import relationship
 class EventoModel(Base):
     __tablename__ = "evento"
     id = Column(Integer, primary_key=True, autoincrement=True)
-    nome = Column(String(100), nullable=False)
+    nome = Column(String(100), unique=True, nullable=False)
     data_inicio = Column(Date, nullable=False)
     data_fim = Column(Date, nullable=False)
     pais = Column(String(100), nullable=False)

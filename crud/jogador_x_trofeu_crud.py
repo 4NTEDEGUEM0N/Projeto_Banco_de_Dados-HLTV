@@ -13,7 +13,7 @@ def create_jogador_trofeu(db: Session, jogador_trofeu: JogadorTrofeuCreate):
 
 
 def read_jogador_trofeu(db: Session, jogador_id: int, evento_id: int):
-    return db.get(JogadorTrofeuModel, (jogador_id, evento_id))
+    return db.get(JogadorTrofeuModel, (evento_id, jogador_id))
 
 
 def read_jogadores_trofeus(db: Session, skip: int = 0, limit: int = 10):
@@ -29,7 +29,7 @@ def update_jogador_trofeu(db: Session, db_jogador_trofeu: JogadorTrofeuModel, jo
 
 
 def delete_jogador_trofeu(db: Session, jogador_id: int, evento_id: int):
-    db_jogador_trofeu = db.get(JogadorTrofeuModel, (jogador_id, evento_id))
+    db_jogador_trofeu = db.get(JogadorTrofeuModel, (evento_id, jogador_id))
     db.delete(db_jogador_trofeu)
     db.commit()
 

@@ -13,7 +13,7 @@ def create_mapa_partida(db: Session, mapa_partida: MapaPartidaCreate):
 
 
 def read_mapa_partida(db: Session, mapa_id: int, partida_id: int):
-    return db.get(MapaPartidaModel, (mapa_id, partida_id))
+    return db.get(MapaPartidaModel, (partida_id, mapa_id))
 
 
 def read_mapas_partidas(db: Session, skip: int = 0, limit: int = 10):
@@ -29,7 +29,7 @@ def update_mapa_partida(db: Session, db_mapa_partida: MapaPartidaModel, mapa_par
 
 
 def delete_mapa_partida(db: Session, mapa_id: int, partida_id: int):
-    db_mapa_partida = db.get(MapaPartidaModel, (mapa_id, partida_id))
+    db_mapa_partida = db.get(MapaPartidaModel, (partida_id, mapa_id))
     db.delete(db_mapa_partida)
     db.commit()
 
