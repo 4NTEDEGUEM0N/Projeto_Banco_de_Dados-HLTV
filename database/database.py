@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-#SQLALCHEMY_DATABASE_URL =  "postgresql://postgres:142@localhost/db_hltv"
-SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_HLTV.db"
+#SQLALCHEMY_DATABASE_URL =  "postgresql://postgres:123@localhost/db_hltv"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./db_HLTV.db"
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
 )

@@ -16,7 +16,7 @@ class MapaPartidaUpdate(MapaPartidaSchemaBase):
 
 class MapaPartidaResponse(MapaPartidaSchemaBase):
     partida: Optional["PartidaResponse"]
-    mapa: Optional["MapaResponse"]
+    #mapa: Optional["MapaResponse"]
 
     model_config = ConfigDict(from_attributes=True)
 

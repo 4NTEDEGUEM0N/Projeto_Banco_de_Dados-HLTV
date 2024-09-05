@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 
 class FotoModel(Base):
     __tablename__ = "foto"
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True)
     nome = Column(String(255), nullable=False)
     nome_foto = Column(String, nullable=False)
     dados = Column(LargeBinary, nullable=False)
