@@ -19,6 +19,7 @@ class EscalacaoUpdate(EscalacaoSchemaBase):
 class EscalacaoResponse(EscalacaoSchemaBase):
     id: int
     jogador: Optional[List["JogadorResponseMinimal"]] = None
+    time: Optional["TimeResponseMinimal"]
 
     model_config = ConfigDict(from_attributes=True)
 
