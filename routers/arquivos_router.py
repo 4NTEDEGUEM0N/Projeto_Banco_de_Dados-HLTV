@@ -20,7 +20,7 @@ def get_arquivo_download(id_foto: int, db: Session = Depends(get_db)):
     db_arquivo = crud.arquivos_crud.read_arquivo(db=db, id_foto=id_foto)
     if not db_arquivo:
         raise HTTPException(status_code=404, detail="Foto not found")
-    return StreamingResponse(io.BytesIO(db_arquivo.dados), media_type="application/octet-stream", headers={"Content-Disposition": f"attachment; filename={db_arquivo.nome_arquivo}"})
+    return StreamingResponse(io.BytesIO(db_arquivo.dados), media_type="application/octet-stream", headers={"Content-Disposition": f"attachment; filename={db_arquivo.nome_foto}"})
 
 
 @router.get("/{id_foto}/visualizar")
