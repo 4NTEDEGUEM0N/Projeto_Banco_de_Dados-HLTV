@@ -12,8 +12,6 @@ router = APIRouter(prefix="/view", tags=["View"])
 @router.get("/jogador_detalhes/all", response_model=List[JogadorDetalhesResponse], status_code=200)
 def get_jogador_detalhes(db: Session = Depends(get_db)):
     db_jogador_detalhes = crud.read_jogador_detalhes(db)
-    if db_jogador_detalhes is None:
-        raise HTTPException(status_code=404, detail="Jogador not found")
     return db_jogador_detalhes
 
 
