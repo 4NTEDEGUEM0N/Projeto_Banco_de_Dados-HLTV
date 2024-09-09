@@ -14,3 +14,6 @@
   * Atualizar o arquivo alembic/env.py com os novos modelos
   * alembic revision --autogenerate -m "Descrição da migração"
   * alembic upgrade head
+
+## PostgresSQL
+* docker run --name db_hltv -p 5432:5432 -e POSTGRES_DB=db_hltv -e POSTGRES_PASSWORD=123 -d postgres

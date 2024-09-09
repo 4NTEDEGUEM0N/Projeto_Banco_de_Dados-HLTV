@@ -1,4 +1,3 @@
-PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 
 INSERT INTO alembic_version VALUES('5502403bc5f6');

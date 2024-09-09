@@ -5,8 +5,6 @@ CREATE TABLE alembic_version (
     CONSTRAINT alembic_version_pkc PRIMARY KEY (version_num)
 );
 
--- Running upgrade  -> 24c1bb81091b
-
 CREATE TABLE evento (
     id SERIAL NOT NULL, 
     nome VARCHAR(100) NOT NULL, 
@@ -146,7 +144,4 @@ CREATE TABLE time_partida (
     FOREIGN KEY(time_id) REFERENCES time (id)
 );
 
-INSERT INTO alembic_version (version_num) VALUES ('24c1bb81091b') RETURNING alembic_version.version_num;
-
 COMMIT;
-
