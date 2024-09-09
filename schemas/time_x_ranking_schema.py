@@ -23,6 +23,7 @@ class TimeRankingResponse(TimeRankingSchemaBase):
 
 class TimeRankingResponseTime(BaseModel):
     time: Optional["TimeResponseMinimal"]
+    posicao: int
     model_config = ConfigDict(from_attributes=True)
 
 
