@@ -16,4 +16,11 @@
   * alembic upgrade head
 
 ## PostgresSQL
-* docker run --name db_hltv -p 5432:5432 -e POSTGRES_DB=db_hltv -e POSTGRES_PASSWORD=123 -d postgres
+* ### Criar um container no docker
+  * docker run --name db_hltv -p 5432:5432 -e POSTGRES_DB=db_hltv -e POSTGRES_PASSWORD=123 -d postgres
+* ### Alterar o DATABASE_URL no arquivo .env
+  * DATABASE_URL = postgresql://postgres:123@localhost/db_hltv
+
+## SQLite
+* ### Alterar o DATABASE_URL no arquivo .env
+  * DATABASE_URL = sqlite:///./db_HLTV.db
