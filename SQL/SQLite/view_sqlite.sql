@@ -20,4 +20,4 @@ LEFT JOIN jogador_trofeu jt ON j.id = jt.jogador_id
 LEFT JOIN trofeu trof ON jt.evento_id = trof.evento_id
 LEFT JOIN evento e ON jt.evento_id = e.id
 LEFT JOIN foto f ON j.foto_id = f.id
-GROUP BY j.id, j.name, j.apelido, j.nacionalidade, j.data_nascimento, j.genero, e.nome, e.id, trof.foto_id, f.nome_foto, f.dados;;
+GROUP BY j.id, j.name, j.apelido, j.nacionalidade, j.data_nascimento, j.genero, e.nome, e.id, trof.foto_id, f.nome_foto, f.dados;

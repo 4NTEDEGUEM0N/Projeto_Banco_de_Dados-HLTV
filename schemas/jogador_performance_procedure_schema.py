@@ -5,7 +5,6 @@ class JogadorPerformanceResponse(BaseModel):
     jogador_id: int
     nome: str
     apelido: str
-    partidas_jogadas: int
     trofeus_ganhos: int
     escalaoes_ativas: int
     time_atual: Optional[str]
