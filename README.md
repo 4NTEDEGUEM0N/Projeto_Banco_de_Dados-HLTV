@@ -24,3 +24,9 @@
 ## SQLite
 * ### Alterar o DATABASE_URL no arquivo .env
   * DATABASE_URL = sqlite:///./db_HLTV.db
+
+## Deploy
+* docker build -t projeto_hltv .
+* docker run --name projeto_hltv -p 80:80 -e DATABASE_URL=sqlite:///./db_HLTV.db projeto_hltv
+* docker build --platform linux/amd64 -t us-central1-docker.pkg.dev/projeto-hltv/repositorio/projeto_hltv:1.0 .
+* docker push us-central1-docker.pkg.dev/projeto-hltv/repositorio/projeto_hltv:1.0
